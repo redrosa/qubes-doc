@@ -49,6 +49,12 @@ In Qubes 4.0, qvm-copy-to-vm and qvm-move-to-vm are deprecated (GUI behaviour is
 qvm-copy [--without-progress] file [file]+
 ```
 
+If you get an error message such as "qfile-agent: Fatal error: stat --without-progress (error type: No such file or directory)" or something similar, remove the parts of the command giving the error. For example, in the VM with the file you intend to copy:
+
+```
+qvm-copy '/home/user/path_to_current_file' /home/user/destination_of_file
+```
+
 
 On inter-qube file copy security
 ----------------------------------
